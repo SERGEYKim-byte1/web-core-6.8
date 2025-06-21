@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+
+} 
+
+body{
+    background: #F8F8F8;
+    font-family: "TT lakes";
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main{
+    padding: 20px 24px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.header{
+    max-width: 1096px;
+    margin-top: 20px;
+}
+
+.header__title{
+    border-left: 2px solid #41F6D7;
+    font-weight: 700;
+    font-size: 28px;
+    padding-left: 25px;
+}
+
+.header__items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__items_right{
+    display: flex;
+    align-items: center;
+}
+
+.checkstatus{
+    margin-left: 10px;
+}
+
+.repair, .checkstatus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header__items_right a{
+    color: #1B1C21;
+    font-size: 16px;
+}
+
+.header__items_right img{
+    margin-left: 8px;
+}
+
+.menu{
+    max-width: 1063px;
+}
+
+.menu__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu__links{
+    color: #7E7E82;
+    
+}
+
+.menu__links:hover{
+    border: 2px solid #B8FFEC;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1120px;
+    margin-top: 50px;
+    padding-left: 25px;
+}
+
+.info__text__block{
+    max-width: 490px;
+}
+
+.info__text p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #1B1C21;
+}
+
+.info__img__blok{
+    max-width: 531px;
+    padding: 10px;
+}
+
+.readmore{
+    display: flex;
+    align-items: center;
+}
+
+.mobile__nav{
+    display: flex;
+    max-width: 768px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 25px;
+    display: none;
+    box-shadow: 0px 2px 1px #D9FFF5;
+}
+
+.mobile__items_left, .mobile__items_right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divider{
+    padding: 32px 2px;
+}
+
+.mobile__nav img{
+    margin: 0 10px;
+}
+
+@media only screen and (max-width: 769px){
+
+    .header__items_right{
+        display: none;
+    }
+
+    .mobile__nav{
+        display: flex;
+    }
+
+    .menu__items{
+        width: 776px;
+        height: 40px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .info__img__blok img, .info__img__blok{
+        max-width: 360px;
+    }
+
+    .info__text__block{
+        max-width: 312px;
+        height: 200px;
+        overflow: hidden;
+    }
+    
+
+}
