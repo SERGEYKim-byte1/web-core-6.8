@@ -3,12 +3,21 @@
 
 } 
 
+@font-face {
+    font-family: "TT lakes";
+    src: url(./assets/TTLakes-Thin.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 body{
     background: #F8F8F8;
     font-family: "TT lakes";
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .main{
@@ -75,15 +84,15 @@ li{
     flex-wrap: wrap;
 }
 
-.menu__links{
+.menu__buttons{
     color: #7E7E82;
-    
+    border:  hidden;
+    padding: 10px 30px;
 }
 
-.menu__links:hover{
+.menu__buttons:hover{
     border: 2px solid #B8FFEC;
     border-radius: 5px;
-    padding: 10px 15px;
 }
 
 .info{
@@ -138,7 +147,15 @@ li{
     margin: 0 10px;
 }
 
-@media only screen and (max-width: 769px){
+.info__text__block .info__text{
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px){
+
+    .main{
+        max-width: 768px;
+    }
 
     .header__items_right{
         display: none;
@@ -146,14 +163,23 @@ li{
 
     .mobile__nav{
         display: flex;
+        width: 768px;
+    }
+
+    .menu{
+       overflow-x: scroll;
+       padding: 20px 10px;
+    }
+
+    .info{
+        margin-top: 20px;
     }
 
     .menu__items{
-        width: 776px;
-        height: 40px;
-        overflow-x: auto;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: flex-start;
+        padding-left: 0px;
+        width: 953px;
     }
     .info__img__blok img, .info__img__blok{
         max-width: 360px;
@@ -161,9 +187,66 @@ li{
 
     .info__text__block{
         max-width: 312px;
-        height: 200px;
+        height: 190px;
         overflow: hidden;
     }
+
+    .menu__buttons{
+        padding: 10px 15px;
+    }
+
+    .readmore{
+        margin-top: 10px;
+    }
     
+
+}
+
+@media only screen and (max-width: 425px){
+
+    .mobile__nav{
+        width: 425px;
+    }
+
+    .main{
+        width: 425px;
+    }
+
+    .info{
+        flex-direction: column;
+    }
+
+    .info__text__block {
+        max-width: 280px;
+        height: 70px;
+    }
+
+    .info__text__block .info__text{
+        font-size: 11px;
+    }
+
+    .readmore span{
+        font-size: 12px;
+    }
+
+    .readmore img{
+        width: 20px;
+    }
+
+    .info__img__blok img, .info__img__blok{
+        /* max-width: 200px; */
+    }
+
+    .hide{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 375px){
+
+}
+
+@media only screen and (max-width: 320px){
 
 }
